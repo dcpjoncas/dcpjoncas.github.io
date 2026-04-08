@@ -100,17 +100,28 @@ nav {
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 200px 1fr;
+  grid-template-columns: 300px 1fr;
   gap: 40px;
   align-items: start;
 }
 
-.hero-photo img {
-  width: 200px;
-  height: 200px;
+.hero-photo {
+  width: 380px;
+  height: 380px;
+  margin-left: -40px;
+  margin-top: -20px;
   border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid var(--color-border);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
 }
 
 .hero-text h1 {
@@ -388,9 +399,14 @@ footer {
     justify-content: center;
   }
 
+  .hero-photo {
+    width: 200px;
+    height: 200px;
+  }
+
   .hero-photo img {
-    width: 160px;
-    height: 160px;
+    width: 100%;
+    height: 100%;
   }
 
   .social-links {
@@ -424,3 +440,6 @@ footer {
     margin-left: 0;
   }
 }
+
+/* Hide News section (removed) */
+#news { display: none !important; }
